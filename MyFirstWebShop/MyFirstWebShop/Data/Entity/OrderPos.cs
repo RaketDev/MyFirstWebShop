@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MyFirstWebShop.Data.Entity
 {
     [PrimaryKey(nameof(OrderId), nameof(OrderPosNr))]
-    public class OrderPos
+    public class OrderPos : CreatedModified
     {
         [Required]
         public int OrderId { get; set; }
@@ -30,7 +30,7 @@ namespace MyFirstWebShop.Data.Entity
         [Required]
         public string Status { get; set; }
 
-        [Required, Column(TypeName = "decimal(8,3)")]
+        [Required, Column(TypeName = "decimal(12,4)")]
         public decimal Price { get; set; }
 
         [Required, Column(TypeName = "decimal(5,4)")]

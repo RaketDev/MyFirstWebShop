@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyFirstWebShop.Data.Entity
 {
-    public class Order
+    public class Order : CreatedModified
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderId { get; set; }

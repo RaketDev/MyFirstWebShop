@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyFirstWebShop.Data.Entity
 {
-    public class Product
+    public class Product : CreatedModified
     {
         [Key]
         public int ProductId { get; set; }
@@ -14,7 +14,7 @@ namespace MyFirstWebShop.Data.Entity
         [Required, StringLength(500)]
         public string? ProductDescription { get; set; }
 
-        [Required, Column(TypeName = "decimal(8,3)")]
+        [Required, Column(TypeName = "decimal(12,4)")]
         public decimal ProductPrice { get; set; }
 
         [Column(TypeName = "decimal(5,4)")]
