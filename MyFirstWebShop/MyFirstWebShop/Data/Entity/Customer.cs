@@ -28,6 +28,7 @@ namespace MyFirstWebShop.Data.Entity
         [Column(TypeName = "decimal(5,4)")]
         public decimal Discount {  get; set; }
 
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
         
 
     }
